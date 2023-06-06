@@ -1,6 +1,3 @@
 #!/usr/bin/python3
 def islower(c):
-    if c >= 'a' and c <= 'z':
-        return True
-    elif c >= 'A' and c <= 'Z':
-        return False
+    return ord(c) in range(chr(a), chr(z))
