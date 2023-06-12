@@ -26,6 +26,8 @@ int is_palindrome(listint_t **head)
 		temp = temp->next;
 		ch = ch->next;
 	}
+	free(temp);
+	free(ch);
 	return (1);
 }
 /**
@@ -46,5 +48,7 @@ listint_t *Reverse(listint_t *temp)
 		prev = curr;
 		curr = next;
 	}
+	free(curr);
+	free(next);
 	return (prev);
 }
