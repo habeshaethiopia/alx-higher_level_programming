@@ -11,4 +11,6 @@ if __name__ == '__main__':
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
     result = func[ope.index(sys.argv[2])](int(sys.argv[1]), int(sys.argv[3]))
-    print(result)
+    a = int(sys.argv[1])
+    b = int(sys.argv[3])
+    print("{:d} {} {:d} = {:d}".format(a, sys.argv[2], b, result))
