@@ -4,14 +4,15 @@
  * @list: head
  * Return: 0 or 1;
  */
-int check_cycle(listint_t *list)
+int check_cycle(listint_t *l)
 {
-	listint_t *h;
+	listint_t *h,*list;
 
-	h = list;
-	while (list)
+	h = list = l;
+	while (h && list && list->next)
 	{
-		list = list->next;
+		list = list->next->next;
+		h = h->next;
 		if (list == h)
 			return (1);
 	}
