@@ -20,7 +20,3 @@ class Square:
     def size(self):
         """ Function that returns the size of the square"""
         return self.__size
-
-    def size(self, value):
-        """setter fir size"""
-        self.__size = size
