@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""This modeule contain a square class"""
+
+
 class square():
     """A square class """
 
