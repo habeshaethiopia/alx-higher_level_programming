@@ -38,8 +38,12 @@ class Square:
         """ function to print asquare compoas of "#" symbol"""
         if (self.__size == 0):
             print()
+        for i in range(self.__position[1]):
+            print()
         for i in range(self.__size):
-            for i in range(self.__size):
+            for k in range(self.__position[0]):
+                print("#")
+            for j in range(self.__size):
                 print("#", end="")
             print()
 
