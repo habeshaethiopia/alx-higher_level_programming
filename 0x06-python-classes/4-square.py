@@ -17,10 +17,11 @@ class Square:
         """ a function which returns the Area"""
         return self.__size*self.__size
 
+    @property
     def size(self):
         """ Function that returns the size of the square"""
         return self.__size
-
+    @size.setter
     def size(self, value):
         """setter fir size"""
         if type(size) != int:
