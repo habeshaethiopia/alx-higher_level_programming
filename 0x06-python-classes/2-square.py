@@ -2,7 +2,7 @@
 """This modeule contain a square class"""
 
 
-class square:
+class Square:
     """A square class """
 
     def __init__(self, size=0):
