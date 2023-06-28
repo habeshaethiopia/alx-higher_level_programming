@@ -1,12 +1,9 @@
 #!/usr/bin/python3
-"""This module contains a square class
-and contain a constracter that accept a variable 
-size and assign to the private attribute of the class
-"""
+"""This module contains a square class"""
 
 
-class square:
-    """A square class """
+class Square:
+    """Empty square class."""
 
     def __init__(self, size):
         """Initialization of the class"""
