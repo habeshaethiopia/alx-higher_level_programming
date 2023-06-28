@@ -13,7 +13,3 @@ class Square:
             elif size < 0:
                 raise ValueError("size must be >= 0")
             self.__size = size
-        except TypeError as t:
-            print(t)
-        except ValueError as v:
-            print(v)
