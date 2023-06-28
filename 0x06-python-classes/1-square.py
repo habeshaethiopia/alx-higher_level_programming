@@ -5,7 +5,7 @@ size and assign to the private attribute of the class
 """
 
 
-class square():
+class square:
     """A square class """
 
     def __init__(self, size):
