@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """module about linked list"""
-
-
 class Node:
     @data.setter
     def data(self, data):
