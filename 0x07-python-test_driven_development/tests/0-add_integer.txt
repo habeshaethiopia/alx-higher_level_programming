@@ -1,0 +1,4 @@
+add_integer('a', 'b')
+add_integer(12, 43)
+add_integer(12, 233.43)
+add_integer(2, "vc")
