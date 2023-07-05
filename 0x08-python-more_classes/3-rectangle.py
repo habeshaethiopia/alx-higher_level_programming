@@ -46,7 +46,7 @@ class Rectangle:
         """calculate perimeter"""
         return 2*(self.__width+self.__height)
 
-    def _str_(self):
+    def __str__(self):
         """Get the string representation"""
         s = ""
         width = self.__width
