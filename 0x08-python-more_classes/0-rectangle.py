@@ -3,7 +3,8 @@
 
 
 class rectangle:
-    """ this is class documentation """
+    """this is class documentation """
+
     def __init__(self):
-        """ class constrCTOR"""
+        """class constrCTOR"""
         pass
