@@ -45,3 +45,14 @@ class Rectangle:
     def perimeter(self):
         """calculate perimeter"""
         return 2*(self.__width+self.__height)
+
+    def _str_(self):
+        """Get the string representation"""
+        s = ""
+        w = self.__width
+        h = self.__height
+        for i in range(h):
+            for j in range(w):
+                s += "#"
+            s += "\n"
+        return s[:-1]
