@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-
-"""
-This is a module for a class Rectangle
-"""
+"""This is a module for a class Rectangle"""
 
 
 class Rectangle:
@@ -48,4 +45,3 @@ class Rectangle:
     def perimeter(self):
         """calculate perimeter"""
         return 2*(self.__width+self.__height)
-        
