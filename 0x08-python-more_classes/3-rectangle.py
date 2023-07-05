@@ -49,8 +49,10 @@ class Rectangle:
     def _str_(self):
         """Get the string representation"""
         s = ""
-        w = self.__width
-        h = self.__height
+        w = self.width
+        h = self.height
+        if w == 0 or h == 0:
+            return s
         for i in range(h):
             for j in range(w):
                 s = s + "#"
