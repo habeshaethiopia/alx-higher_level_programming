@@ -53,6 +53,6 @@ class Rectangle:
         h = self.__height
         for i in range(h):
             for j in range(w):
-                s += "#"
-            s += "\n"
+                s = s + "#"
+            s = s + "\n"
         return s[:-1]
