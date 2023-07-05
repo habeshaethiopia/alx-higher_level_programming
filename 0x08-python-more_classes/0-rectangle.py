@@ -4,4 +4,6 @@
 
 class rectangle:
     """ this is class documentation """
-    pass
+    def __init__(self):
+        """ class constrCTOR"""
+        pass
