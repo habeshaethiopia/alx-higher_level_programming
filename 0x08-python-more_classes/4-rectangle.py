@@ -44,9 +44,11 @@ class Rectangle:
 
     def perimeter(self):
         """calculate perimeter"""
+        if self.width == 0 or self.height == 0:
+            return 0
         return 2*(self.__width+self.__height)
 
-    def _str_(self):
+    def __str__(self):
         """Get the string representation"""
         s = ""
         width = self.__width
@@ -61,7 +63,5 @@ class Rectangle:
 
     def __repr__(self):
         """get string representation"""
-        width = self.__width
-        height = self.__height
-        s = "Rectangle(" + str(width) + ", " + str(height) + ")"
+        s = "Rectangle({}, {})".format(str(self.__width), str(self.height))
         return s
