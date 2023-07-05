@@ -1,12 +1,13 @@
 #!/usr/bin/python3
+
 """
-The module contain rectangle class.
+This is a module for a class Rectangle
 """
 
 
-class rectangle:
-    """this is class documentation."""
+class Rectangle:
+    """Class of a Rectangle"""
 
     def __init__(self):
-        """class constrCTOR."""
+        """Initialize class"""
         pass
