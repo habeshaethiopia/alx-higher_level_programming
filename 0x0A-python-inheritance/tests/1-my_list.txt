@@ -1,64 +1,65 @@
 =============================
 The ``1-my_list`` module
 =============================
-using ``my_list``
+
+Using ``MyList``
 ---------------------
+
 Import the class:
 
-        >>> my_list = __import__('1-my_list').MyList
-Now test:
+    >>> MyList = __import__('1-my_list').MyList
 
-        >>> my_list = MyList()
-        >>> my_list.append(1)
-        >>> my_list.append(4)
-        >>> my_list.append(2)
-        >>> my_list.append(3)
-        >>> my_list.append(5)
-        >>> print(my_list)
-        [1, 4, 2, 3, 5]
+Now test it:
 
-        >>> my_list.print_sorted()
-        [1, 4, 2, 3, 5]
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
 
-        >>> print(my_list)
-        [1, 4, 2, 3, 5]
-        >>> my_list.append(0)
-        >>> my_list.print_sorted()
-        [0, 1, 2, 3, 4, 5]
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
 
-        >>> my_list.append(-3)
-        >>> my_list.append(-10)
-        >>> my_list.print_sorted()
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+    >>> my_list.append(0)
+    >>> my_list.print_sorted()
+    [0, 1, 2, 3, 4, 5]
 
-        [-10, -3, 0, 1, 2, 3, 4, 5]
-        >>> print(my_list)
-
-        [1, 4, 2, 3, 5, 0, -3, -10]
-        >>> my_list.print_sorted() == my_list
-        [-10, -3, 0, 1, 2, 3, 4, 5]
-        False
-        >>> my_list = MyList("Ethiopia")
-        >>> my_list
-        ['E', 't', 'h', 'i', 'o', 'p', 'i', 'a']
-        >>> my_list.print_sorted()
-        ['E', 'a', 'h', 'i', 'i', 'o', 'p', 't']
-        >>> my_list = MyList()
-        >>> my_list
-        []
-        >>> my_list.print_sorted()
-        []
-        >>> my_list.append(5)
-        >>> my_list.append(3)
-        >>> my_list
-        [5, 3]
-        >>> my_list.print_sorted()
-        [3, 5]
-        >>> my_list = MyList([8,9,12])
-        >>> my_list
-        [8, 9, 12]
-        >>> my_list.print_sorted()
-        [8, 9, 12]
-        >>> slist=my_list.print_sorted()
-        [8, 9, 12]
-        >>> my_list is slist
-        False
+    >>> my_list.append(-3)
+    >>> my_list.append(-10)
+    >>> my_list.print_sorted()
+    [-10, -3, 0, 1, 2, 3, 4, 5]
+    >>> print(my_list)
+    [1, 4, 2, 3, 5, 0, -3, -10]
+    >>> my_list.print_sorted() == my_list
+    [-10, -3, 0, 1, 2, 3, 4, 5]
+    False
+    >>> my_list = MyList("Ethiopia")
+    >>> my_list
+    ['E', 't', 'h', 'i', 'o', 'p', 'i', 'a']
+    >>> my_list.print_sorted()
+    ['E', 'a', 'h', 'i', 'i', 'o', 'p', 't']
+    >>> my_list = MyList()
+    >>> my_list
+    []
+    >>> my_list.print_sorted()
+    []
+    >>> my_list.append(5)
+    >>> my_list.append(3)
+    >>> my_list
+    [5, 3]
+    >>> my_list.print_sorted()
+    [3, 5]
+    >>> my_list = MyList([8,9,12])
+    >>> my_list
+    [8, 9, 12]
+    >>> my_list.print_sorted()
+    [8, 9, 12]
+    >>> slist=my_list.print_sorted()
+    [8, 9, 12]
+    >>> my_list is slist
+    False
