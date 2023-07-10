@@ -10,13 +10,13 @@ class Rectangle(BaseGeometry):
         """The constractor"""
         self.integer_validator("width", width)
         self.integer_validator("height", height)
-        self._width = width
-        self._height = height
+        self.__width = width
+        self.__height = height
 
     def area(self):
         """impliment the area"""
-        return self._height * self._width
+        return self.__height * self.__width
 
     def __str__(self):
         """the string"""
-        print("[Rectangle] {}/{}".format(self._width, self._height))
+        print("[Rectangle] {}/{}".format(str(self._width), str(self._height)))
