@@ -5,5 +5,5 @@ Amodule contaning the lookup method.
 
 
 def lookup(obj):
-    """function that returns the list of available attributes and methods of an object."""
+    """returns attributes"""
     return dir(obj)
