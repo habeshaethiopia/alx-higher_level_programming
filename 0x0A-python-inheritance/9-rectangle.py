@@ -19,4 +19,4 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         """the string"""
-        return ("[Rectangle] " + str(self._width) +  "/" + str(self._height)
+        return ("[Rectangle] " + str(self._width) +  "/" + str(self._height))
