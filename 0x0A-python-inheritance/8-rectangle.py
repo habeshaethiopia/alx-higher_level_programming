@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """the modile document"""
-
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 class Rectangle(BaseGeometry):
     """aclass inherit from base Geometry"""
