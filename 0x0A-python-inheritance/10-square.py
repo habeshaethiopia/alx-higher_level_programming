@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """the modile document"""
-Rectangle = __import__('9-rectangle').Rectangl
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
