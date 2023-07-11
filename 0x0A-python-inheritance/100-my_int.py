@@ -5,14 +5,10 @@
 class MyInt(int):
     """myint class"""
 
-    def __init__(self,  val):
-        """initilizer"""
-        self.val = val
-
     def __eq__(self, other):
         """function documented"""
-        return self.val != other.val
+        return super() != other.val
 
     def __ne__(self, other):
         """function documented"""
-        return self.val == other.val
+        return super() == other.val
