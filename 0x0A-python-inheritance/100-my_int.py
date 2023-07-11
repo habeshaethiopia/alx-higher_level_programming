@@ -7,8 +7,8 @@ class MyInt(int):
 
     def __eq__(self, other):
         """function documented"""
-        return super() != other.val
+        return super().__ne__(other)
 
     def __ne__(self, other):
         """function documented"""
-        return super() == other.val
+        return super().__eq__(other)
