@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """the modile document"""
+
 Rectangle = __import__('9-rectangle').Rectangle
 
 
@@ -14,4 +15,4 @@ class Square(Rectangle):
 
     def area(self):
         """the area"""
-        return self.size**2
+        return self.size ** 2
