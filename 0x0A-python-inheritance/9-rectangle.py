@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""the modile document"""
+"""the module document"""
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
@@ -19,4 +19,4 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         """the string"""
-        return ("[Rectangle] {}/{}".format(str(self._width), str(self._height)))
+        return "[Rectangle] "+str(self._width)+"/"+str(self._height)
