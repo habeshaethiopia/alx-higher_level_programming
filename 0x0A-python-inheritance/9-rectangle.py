@@ -20,5 +20,3 @@ class Rectangle(BaseGeometry):
     def __str__(self):
         """the string"""
         return "[Rectangle] "+str(self.__width)+"/"+str(self.__height)
-r = Rectangle(1411, 781)
-print(r)
