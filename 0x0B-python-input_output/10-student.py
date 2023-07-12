@@ -14,10 +14,10 @@ class Student:
     def to_json(self, attrs=None):
         """the dict of the obj"""
         retu = []
-        if all(type(item) == str for item in attrs):
+        if attrs is not None and all(type(item) == str for item in attrs):
             for key, value in self.__dict__.items():
                 if key in attrs:
-                    retu.append({key: value})
+                    retu[key] = value
             return retu
         else:
             return self.__dict__
