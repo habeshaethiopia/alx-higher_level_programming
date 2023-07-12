@@ -13,7 +13,7 @@ class Student:
 
     def to_json(self, attrs=None):
         """the dict of the obj"""
-        
+
         if attrs is not None and all(type(item) == str for item in attrs):
             retu = {}
             for key, value in self.__dict__.items():
