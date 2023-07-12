@@ -6,7 +6,7 @@ def pascal_triangle(n):
     """the Technical interview preparation"""
     lis = []
     if n <= 0:
-        return
+        return lis
     else:
         for i in range(1, n+1):
             row = []
