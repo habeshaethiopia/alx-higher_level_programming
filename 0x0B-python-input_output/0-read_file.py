@@ -5,4 +5,5 @@
 def read_file(filename=""):
     """function doc"""
     with open(filename) as f:
-        print(f.read())
+        for line in f:
+            print(line)
