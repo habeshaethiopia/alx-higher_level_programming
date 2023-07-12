@@ -5,5 +5,5 @@ import json
 
 def from_json_string(my_str):
     """form JSON to string"""
-    str = json.load(my_str)
+    str = json.loads(my_str)
     return str
