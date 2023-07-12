@@ -5,4 +5,4 @@
 def to_json_string(my_obj):
     """function doc"""
     import json
-    return json.dump(my_obj)
+    return json.dump(str(my_obj))
