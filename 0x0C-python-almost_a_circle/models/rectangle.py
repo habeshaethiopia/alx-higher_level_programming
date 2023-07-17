@@ -105,11 +105,12 @@ class Rectangle(Base):
         """the string Notation"""
         return "[Rectangle] ("+str(self.id) + ") "+str(self.__x)+"/"+str(self.__y)+" - "+str(self.__width)+"/"+str(self.__height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """afunction update"""
         if args is not None:
-            if args[0]:
-                self.id = args[0]
+            if len(args) > 0:
+                if args[0]:
+                    self.id = args[0]
             if len(args) > 1:
                 if args[1]:
                     self.__width = args[1]
@@ -122,3 +123,15 @@ class Rectangle(Base):
             if len(args) > 4:
                 if args[4]:
                     self.__y = args[4]
+        else:
+            for key, value in kwargs.items():
+                if key == "width":
+                    self.__width = value
+                if key == "height":
+                    self.__height = value
+                if key == "id":
+                    self.id = value
+                if key == "x":
+                    self.__x = value
+                if key == "y":
+                    self.__y = value
