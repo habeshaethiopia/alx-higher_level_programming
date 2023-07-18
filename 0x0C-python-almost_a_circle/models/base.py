@@ -4,7 +4,7 @@
 
 import json
 import csv
-
+import turtle
 import os
 
 
@@ -117,3 +117,33 @@ class Base:
                                 setattr(dummy, header[x], int(y))
                         ret.append(dummy)
         return ret
+
+    def draw(list_rectangles, list_squares):
+        """Draw Rectangles and Squares using the turtle module"""
+        turt = turtle.Turtle()
+        turt.shape("turtle")
+        turt.pensize(4)
+        turt.screen.bgcolor("black")
+
+        turt.color("#123456")
+        for rect in list_rectangles:
+            turt.showturtle()
+            turt.up()
+            turt.goto(rect.x, rect.y)
+            turt.down()
+            for i in range(2):
+                turt.forward(rect.width)
+                turt.left(90)
+                turt.forward(rect.height)
+                turt.left(90)
+
+        turt.color("Green")
+        for sq in list_squares:
+            turt.up()
+            turt.goto(sq.x, sq.y)
+            turt.down()
+            for i in range(4):
+                turt.forward(sq.width)
+                turt.left(90)
+        turt.hideturtle()
+        turtle.exitonclick()
