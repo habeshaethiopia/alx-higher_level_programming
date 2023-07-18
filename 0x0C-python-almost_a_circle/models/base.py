@@ -3,6 +3,9 @@
 """this is the module contain Bse class"""
 
 import json
+import csv
+
+import os
 
 
 class Base:
@@ -72,4 +75,45 @@ class Base:
             return []
         ins = cls.from_json_string(the_load)
         ret = [cls.create(**x) for x in ins]
+        return ret
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """save csv"""
+        fname = cls.__name__+".csv"
+        sfields = ['id', 'size', 'x', 'y']
+        rfields = ['id', 'width', 'height', 'x', 'y']
+        if cls.__name__ == "Rectangle":
+            header = rfields
+        else:
+            header = sfields
+
+        with open(fname, "w") as f:
+            if list_objs is not None:
+                data = [i.to_dictionary() for i in list_objs]
+                fi = csv.writer(f, fildnames=header)
+                fi.writerow(list_objs)
+                writer.writeheader()
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """lode from csv"""
+        fname = cls.__name__+".csv"
+        sfields = ['id', 'size', 'x', 'y']
+        rfields = ['id', 'width', 'height', 'x', 'y']
+        if cls.__name__ == "Rectangle":
+            header = rfields
+        else:
+            header = sfields
+        ret = []
+        if os.path.exists(fname):
+            with open(filename) as f:
+                result = csv.reader(f, delimiter=", ")
+                for index, val in enumerate(result):
+                    if i > 0:
+                        dummy = cls(1, 1)
+                        for x, y in enumerate(val):
+                            if y:
+                                setattr(dummy, header[x], int(y))
+                        ret.append(dummy)
         return ret
