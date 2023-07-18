@@ -52,3 +52,10 @@ class Base:
             return []
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """second class method"""
+        dummy = cls(2, 3) if cls.__name__ == "Rectangle" else cls(2)
+        dummy.update(**dictionary)
+        return dummy
