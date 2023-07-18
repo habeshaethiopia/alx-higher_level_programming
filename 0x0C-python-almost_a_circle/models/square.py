@@ -14,3 +14,14 @@ class Square(Rectangle):
         """the string Notation"""
         return "[Square] ("+str(self.id) + ") "+str(self.x) +\
             "/"+str(self.y)+" - "+str(self.width)
+
+    @property
+    def size(self):
+        """getter for size"""
+        return self.width
+
+    @size.setter
+    def size(self, size):
+        """setter for size"""
+        super().width(size)
+        super().height(size)
