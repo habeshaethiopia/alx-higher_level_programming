@@ -44,3 +44,11 @@ class Base:
         with open(fname, "w") as f:
             content = cls.to_json_string(wr)
             f.write(content)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """to the string"""
+        if json_string is None or json_string == "":
+            return []
+        else:
+            return json.loads(json_string)
