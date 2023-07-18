@@ -12,5 +12,5 @@ class Square(Rectangle):
 
     def __str__(self):
         """the string Notation"""
-        return "[Square] ("+str(self.id) + ") "+str(self.x) +\
-            "/"+str(self.y)+" - "+str(self.width)
+        return "[Square] ("+str(self.id) + ") "+str(self.__x) +\
+            "/"+str(self.__y)+" - "+str(self.__width)
