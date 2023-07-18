@@ -31,8 +31,15 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """save to the file"""
-        if not isinstance(cls, list_objs):
-            raise TypeError("list_objs must be sub class of Base")
-        with open(str(cls)+".json", "w") as f:
-            res = to_json_string(list_objs)
-            f.write(res)
+        if type(list_objs) != list and list_objs is not None:
+            raise TypeError("list_objs must be a list")
+        if list_objs == [] or list_objs is None:
+            wr = []
+        else:
+            if any(type(i) != type(list_objs[0]) for i in list_objs):
+                raise ValueError("all elements of list_objs must match")
+            wr = [i.to_dictionary() for i in list_objs]
+        fname = cls.__name__+".json"
+        with open(fname, "w") as f:
+            content = cls.to_json_string(wr)
+            f.write(content)
