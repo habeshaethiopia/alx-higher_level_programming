@@ -36,7 +36,8 @@ class Base:
         if list_objs == [] or list_objs is None:
             wr = []
         else:
-            if any(type(i) != type(list_objs[0]) for i in list_objs):
+            ty = type(list_objs[0])
+            if any(type(i) != ty for i in list_objs):
                 raise ValueError("all elements of list_objs must match")
             wr = [i.to_dictionary() for i in list_objs]
         fname = cls.__name__+".json"
