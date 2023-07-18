@@ -25,6 +25,7 @@ class Square(Rectangle):
         """setter for size"""
         self.width = size
         self.height = size
+
     def update(self, *args, **kwargs):
         """afunction update"""
         if args is not None:
