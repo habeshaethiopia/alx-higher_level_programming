@@ -2,6 +2,8 @@
 
 """this is the module contain Bse class"""
 
+import json
+
 
 class Base:
     """doc for this calss"""
@@ -14,3 +16,10 @@ class Base:
         else:
             Base.__nb_objects = Base.__nb_objects + 1
             self.id = Base.__nb_objects
+
+    def to_json_string(list_dictionaries):
+        """to json"""
+        if list_dictionaries is None:
+            return "[]"
+        else:
+            return json.dumps(list_dictionaries)
