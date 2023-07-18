@@ -64,10 +64,12 @@ class Base:
     def load_from_file(cls):
         """load"""
         the_load = ""
+        ret = []
         try:
             with open(cls.__name__+".json") as f:
                 the_load = f.read()
         except Exception as e:
             return []
         ins = cls.from_json_string(the_load)
-        return cls.create(ins)
+        ret = [cls.create(**x) for x in ins]
+        return ret
