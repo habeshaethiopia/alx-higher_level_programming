@@ -13,5 +13,5 @@ IF NOT EXISTS states
 {
     id INT UNIQUE,
     name VARCHAR
-(256) NOT NULL,
+(256) NOT NULL
 }
