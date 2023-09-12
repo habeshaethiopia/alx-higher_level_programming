@@ -7,6 +7,7 @@ console.log(r1.width);
 console.log(r1.height);
 r1.print();
 r1.rotate();
+r1.double()
 r1.print()
 
 const r2 = new Rectangle(2, -3);
