@@ -4,7 +4,8 @@ if (!arg[3]) console.log(0);
 else {
   const newarr = [];
   for (let i = 2; i < arg.length; i++) {
-    newarr.push(parseInt(arg[i]));
+    const x = parseInt(arg[i]);
+    if (x) { newarr.push(x); }
   }
   newarr.sort();
   console.log(newarr[newarr.length - 2]);
