@@ -8,6 +8,5 @@ else {
     if (x) { newarr.push(x); }
   }
   newarr.sort((a, b) => a - b);
-  console.log(newarr);
   console.log(newarr[newarr.length - 2]);
 }
