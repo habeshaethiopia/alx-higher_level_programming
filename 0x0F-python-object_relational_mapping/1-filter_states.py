@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
     cur = db.cursor()
     cur.execute(
-        "select * from states where where \
+        "select * from states where \
         ASCII(SUBSTRING(name, 1, 1)) = ASCII('N') \
                 order by states.id asc;"
     )
