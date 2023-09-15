@@ -14,7 +14,8 @@ if __name__ == "__main__":
 
     cur = db.cursor()
     cur.execute(
-        "select * from states where name like 'N%' \
+        "select * from states where where \
+        ASCII(SUBSTRING(name, 1, 1)) = ASCII('N') \
                 order by states.id asc;"
     )
     rows = cur.fetchall()
