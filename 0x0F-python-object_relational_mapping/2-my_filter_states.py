@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
     cur = db.cursor()
     cur.execute(Query)
-    rows = cur.fetchall()case
+    rows = cur.fetchall()
     tup = ()
     for row in rows:
         for col in row:
