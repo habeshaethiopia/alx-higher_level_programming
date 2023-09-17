@@ -17,7 +17,7 @@ if __name__ == "__main__":
                          user=MY_USER, passwd=MY_PASS, db=MY_DB)
 
     cur = db.cursor()
-    cur.execute(Query,(argv[4],))
+    cur.execute(Query, (argv[4], ))
     rows = cur.fetchall()
     for i, row in enumerate(rows):
         print(row[0], end="")
