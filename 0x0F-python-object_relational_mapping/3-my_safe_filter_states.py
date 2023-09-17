@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""this module is for connecting to the mysql database and to print
-what is inside the states table that where 'name' matches the argument."""
+"""sql injection prevntion"""
 from sys import argv
 import MySQLdb
 
@@ -24,4 +23,3 @@ if __name__ == "__main__":
             tup = tup + (col,)
         print(tup)
         tup = ()
-
