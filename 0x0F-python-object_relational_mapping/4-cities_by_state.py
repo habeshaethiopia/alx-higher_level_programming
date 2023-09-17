@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """this module is for connecting to the mysql database and to print
-what is inside the states table """
+what is inside the cities table and joins to states table using the
+foreign key state id in cities table"""
 from sys import argv
 import MySQLdb
 
