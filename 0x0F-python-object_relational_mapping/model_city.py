@@ -10,7 +10,8 @@ class City(Base):
 
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
     name = Column(String(128))
-    state_id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
+    state_id = Column(Integer, primary_key=True, 
+                      autoincrement=True, nullable=False)
 
     __tablename__ = "states"
     __tablename__
