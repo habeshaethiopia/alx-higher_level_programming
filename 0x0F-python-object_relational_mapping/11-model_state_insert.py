@@ -17,5 +17,4 @@ if __name__ == "__main__":
     new_user = State(name="Louisiana")
     session.add(new_user)
     session.commit()
-    for i in session.query(State).order_by(State.id).all():
-        print("{}: {}".format(i.id, i.name))
+    print(new_user.id)
