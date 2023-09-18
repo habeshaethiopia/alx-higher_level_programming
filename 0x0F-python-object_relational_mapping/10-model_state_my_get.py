@@ -18,9 +18,9 @@ if __name__ == "__main__":
         session.query(State)
         .order_by(State.id)
         .filter_by(name="{}".format(argv[4]))
-        .one()
+        .first()
     )
     if (i):
-        print("{}".format(i.id))
+        print(i.id)
     else:
         print("Not found")
