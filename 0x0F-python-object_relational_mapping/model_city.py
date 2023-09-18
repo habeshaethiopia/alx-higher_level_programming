@@ -13,5 +13,5 @@ class City(Base):
     state_id = Column(Integer, primary_key=True, 
                       autoincrement=True, nullable=False)
 
-    __tablename__ = "states"
+    __tablename__ = "cities"
     __tablename__
