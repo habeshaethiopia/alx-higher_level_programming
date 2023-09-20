@@ -19,6 +19,8 @@ if __name__ == "__main__":
     cur = db.cursor()
     cur.execute(Query, (argv[4], ))
     rows = cur.fetchall()
+    if not len(rows):
+        print()
     for i, row in enumerate(rows):
         print(row[0], end="")
         if i < len(rows) - 1:
