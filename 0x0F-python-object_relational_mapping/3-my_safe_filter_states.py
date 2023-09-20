@@ -9,7 +9,7 @@ if __name__ == "__main__":
     MY_DB = argv[3]
     MY_AEG = argv[4]
     Query = "select * from states where \
-        name = \"{}\" \
+       binary name = \"{}\" \
                 order by states.id asc;".format(MY_AEG)
     db = MySQLdb.connect(host="localhost",
                          user=MY_USER, passwd=MY_PASS, db=MY_DB)
