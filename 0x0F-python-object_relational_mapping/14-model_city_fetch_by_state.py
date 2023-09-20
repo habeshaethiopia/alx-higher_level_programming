@@ -16,3 +16,14 @@ if __name__ == "__main__":
     engine = create_engine(
         "mysql+mysqldb://{}:{}@localhost/{}".format(username, password, dbname)
     )
+    Session = sessionmaker(bind=engine)
+    conn = Session()
+    result = (
+        conn.query(City, State)
+        .join(State, State.id == City.state_id)
+        .order_by(City.id)
+        .all()
+    )
+
+    for city, state in result:
+        print("{}: ({}) {}".format(state.name, city.id, city.name))
