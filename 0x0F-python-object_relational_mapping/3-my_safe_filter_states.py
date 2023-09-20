@@ -15,7 +15,7 @@ if __name__ == "__main__":
                          user=MY_USER, passwd=MY_PASS, db=MY_DB)
 
     cur = db.cursor()
-    cur.execute(Query,(MY_AEG,))
+    cur.execute(Query, (MY_AEG,))
     rows = cur.fetchall()
     tup = ()
     for row in rows:
