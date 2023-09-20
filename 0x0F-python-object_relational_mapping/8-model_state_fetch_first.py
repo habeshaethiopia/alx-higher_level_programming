@@ -18,4 +18,4 @@ if __name__ == "__main__":
     if i:
         print("{}: {}".format(i.id, i.name))
     else:
-        print()
+        print("Nothing")
