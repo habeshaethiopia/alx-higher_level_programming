@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""the advanced task start module"""
+
 from sqlalchemy import create_engine, insert
 from sqlalchemy.orm import sessionmaker
 from sys import argv
