@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""the advanced task start module"""
 from sqlalchemy import create_engine, insert
 from sqlalchemy.orm import sessionmaker
 from sys import argv
@@ -21,6 +21,6 @@ if __name__ == "__main__":
     rel = conn.query(City).all()
     for s in result:
         print("{}: {}".format(s.id, s.name))
-        for i in rel:
+        for i in s.cities:
             if s.id == i.state_id:
                 print("\t{}: {}".format(i.id, i.name))
