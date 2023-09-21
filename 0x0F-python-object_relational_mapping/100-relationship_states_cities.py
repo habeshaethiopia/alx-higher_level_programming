@@ -17,7 +17,7 @@ if __name__ == "__main__":
     conn = Session()
     S_add = State(name="California")
     conn.add(S_add)
-    C_add = City(name="San Francisco" ,state = S_add)
+    C_add = City(name="San Francisco" ,stat = S_add)
     conn.add(C_add)
     conn.commit()
     conn.close()
