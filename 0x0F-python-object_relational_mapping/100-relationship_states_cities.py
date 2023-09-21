@@ -3,7 +3,7 @@
 from sqlalchemy import create_engine, insert
 from sqlalchemy.orm import sessionmaker
 from sys import argv
-from relationship_state import State
+from relationship_state import State, Base
 from relationship_city import City
 
 if __name__ == "__main__":
@@ -13,11 +13,13 @@ if __name__ == "__main__":
     engine = create_engine(
         "mysql+mysqldb://{}:{}@localhost/{}".format(username, password, dbname)
     )
+    
+    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     conn = Session()
     S_add = State(name="California")
     conn.add(S_add)
-    C_add = City(name="San Francisco" ,stat = S_add)
+    C_add = City(name="San Francisco" ,state = S_add)
     conn.add(C_add)
     conn.commit()
     conn.close()
