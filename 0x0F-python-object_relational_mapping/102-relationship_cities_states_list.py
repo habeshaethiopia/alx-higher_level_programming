@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
 """the advanced task start module"""
 from sqlalchemy import create_engine, insert
 from sqlalchemy.orm import sessionmaker
@@ -22,4 +21,4 @@ if __name__ == "__main__":
     for s in result:
         for i in s.cities:
             if s.id == i.state_id:
-                  print("{}: {} -> {}".format(i.id, i.name, s.name))
+                print("{}: {} -> {}".format(i.id, i.name, s.name))
