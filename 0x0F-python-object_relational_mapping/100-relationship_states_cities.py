@@ -12,14 +12,14 @@ if __name__ == "__main__":
     dbname = argv[3]
     engine = create_engine(
         "mysql+mysqldb://{}:{}@localhost/{}".format(username, password, dbname)
-    , pool_pre_ping=True)
+    )
 
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     conn = Session()
     S_add = State(name="California")
     conn.add(S_add)
-    C_add = City(name="San Francisco" ,state = S_add)
+    C_add = City(name="San Francisco", state=S_add)
     conn.add(C_add)
     conn.commit()
     conn.close()
