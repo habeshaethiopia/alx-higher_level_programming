@@ -1,3 +1,3 @@
 #!/bin/bash
 #send JSON post request
-curl -s -X POST -h "content-type: application/json" -d @"$2" $1
+curl -s -X POST -H "content-type: application/json" -d @"$2" $1
