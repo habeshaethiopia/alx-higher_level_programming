@@ -1,1 +1,2 @@
-O(n)
+#the complexity of find_peak(list) finction
+O(log(n))
