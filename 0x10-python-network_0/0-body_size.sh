@@ -1,3 +1,3 @@
 #!/bin/bash
 # displays the size of the body of the response
-curl -s -w '%{size_download}\n' "$1"
+curl -i -s "$1" | grep 'Content-Length'| cut -d ' ' -f2
