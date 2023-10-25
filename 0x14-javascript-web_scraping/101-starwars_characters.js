@@ -9,14 +9,14 @@ request(url, options, (error, res, body) => {
   if (error) {
     console.log(error);
   } else {
-    const characters = body.characters;
-    order(characters, 0);
+    const character = body.characters;
+    order(character, 0);
   }
 }
 );
 function order (characters, i) {
   if (characters.length === i) { return; }
-  request(characters[i], (error, res, body) => {
+  request(characters[i], options, (error, res, body) => {
     if (error) {
       console.log(error);
     } else {
