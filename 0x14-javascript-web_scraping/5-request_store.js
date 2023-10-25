@@ -12,7 +12,7 @@ request(url, options, (error, res, body) => {
   }
 
   if (!error && res.statusCode === 200) {
-    fs.writeFile(argv[3], body, err => {
+    fs.writeFile(argv[3], body = "", err => {
       if (err) {
         console.log(err);
       }
