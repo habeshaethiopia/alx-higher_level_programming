@@ -1,8 +1,9 @@
 #!/usr/bin/node
 // print complited
 const request = require('request');
+
 const options = { json: true };
-const url = 'https://swapi-api.alx-tools.com/api/films/3';
+const url = `https://swapi-api.alx-tools.com/api/films/${process.argv[2]}`;
 
 request(url, options, (error, res, body) => {
   if (error) {
