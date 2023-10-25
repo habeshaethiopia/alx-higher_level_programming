@@ -1,8 +1,9 @@
 #!/usr/bin/node
 // printing the status code
 const request = require('request');
+const { argv } = require('process');
+const url = (`${argv[2]}`).replace('films', 'people/18');
 
-const url = 'https://swapi-api.alx-tools.com/api/people/18';
 const options = { json: true };
 request(url, options, (error, res, body) => {
   if (error) {
