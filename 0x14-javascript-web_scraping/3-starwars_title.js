@@ -2,11 +2,16 @@
 // printing the status code
 const request = require('request');
 const { argv } = require('process');
-const url = argv[2];
-request(url, function (error, response, body) {
+
+const url = `https://swapi-api.alx-tools.com/api/films/${argv[2]}`;
+let result;
+const options = { json: true };
+request(url, options, (error, res, body) => {
   if (error) {
-    console.error('error:', error);
-  } else {
-    console.log('code:', response && response.statusCode);
+    return console.log(error);
+  }
+
+  if (!error && res.statusCode === 200) {
+    console.log(body.title);
   }
 });
