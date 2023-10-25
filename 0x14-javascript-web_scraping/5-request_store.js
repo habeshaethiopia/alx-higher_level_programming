@@ -11,8 +11,8 @@ request(url, options, (error, res, body) => {
     return console.log(error);
   }
 
-    if (!error && res.statusCode === 200) {
-    fs.writeFile(argv[3], body,'utf8', err => {
+  if (!error && res.statusCode === 200) {
+    fs.writeFile(argv[3], body, 'utf8', err => {
       if (err) {
         console.log(err);
       }
